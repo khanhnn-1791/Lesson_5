@@ -182,8 +182,7 @@ extension MessengerViewController: UITableViewDataSource {
             print("remove action tapped")
             tableView.beginUpdates()
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
-            self.list.remove(at: indexPath.row)
-            tableView.reloadData()
+            self.tempList.remove(at: indexPath.row)
             tableView.endUpdates()
         }
         let detailAction = UIContextualAction(style: .normal, title: "Detail") { (action, view, handler) in
